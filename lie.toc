@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}January 19, 2021 (Tuesday)}{2}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Motivations}{2}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Lie algebras and subalgebras}{2}{subsection.1.2}% 
+\contentsline {section}{\numberline {2}January 21, 2021 (Thursday)}{4}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Ideals}{4}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Centers}{5}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Simple Lie Algebras}{6}{subsection.2.3}% 

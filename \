@@ -1,0 +1,41 @@
+\subsection{Ideals}
+An ideal is similar to a subalgebra, but has a stronger limiting condition. 
+\begin{definition}
+An \vocab{ideal} of a Lie Algebra $L$ is a subspace $I$ such that 
+\[ [x,y] \in I \text{ }\forall x\in L \text{ and } y \in I. \] 
+Any ideal is also a subalgebra of $L$. 
+\end{definition}
+This is the analog to an ideal for a ring. 
+
+\begin{example}[Quotient Algebra]
+Let $L$ be a Lie algebra, and $I \subset L$ be an ideal. Then the vector space $L/I$ is also a Lie algebra. The vectors are the \emph{cosets} 
+\[ x + I = \{x+y | y \in I \} \subset L. \] We define the bracket as 
+\[ [x+I, y+I] = [x+y] + I. \] As all $[x,y] \in I$, this is well defined for cosets. This Lie algebra is called the \vocab{quotient algebra}.  
+\end{example}
+
+Let $M$ and $N$ be subspaces of $L$, an arbitrary Lie algebra. Then 
+\[ [M,N] = \Span\{[x,y] | x \in M, y \in N\} = \Span \{\sum_{i} [x_i,y_i] | x_i \in M, y_i \in N. \] 
+In particular, if $M$ is a subalgebra, then 
+\[ [M,M] \subseteq M, \] and if $M$ is an ideal, then \[ [L,M] \subseteq M. \] 
+
+\begin{definition}
+The \vocab{derived algebra} of $L$ is $[L,L]$. 
+\end{definition}
+
+We also have the following: 
+\begin{lemma*}
+$[L,L] \subset L$ is an ideal, which implies it is a subalgebra, and thus itself is a Lie algebra. 
+\end{lemma*}
+\begin{proof}
+Let $I = [L,L]$, which is a subspace of $L$ by constraint. Then 
+\[ [L,I] \subseteq [L,L] = I, \] as $I \subseteq L$, and we are done. 
+\end{proof}
+
+\begin{lemma*}
+Let $L = \mathfrak{gl}(n)$. Then 
+\[ [L,L] = \frak{sl}(n). \] 
+\end{lemma*}
+\begin{proof}
+We have $[L,L] \subseteq \frak{sl}(n)$, as the trace of any commutator is equal to 0. 
+\end{proof}<++>
+

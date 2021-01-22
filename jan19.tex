@@ -1,0 +1,90 @@
+\subsection{Motivations}
+
+The main motivation for the study of Lie algebra comes from the notation of symmetry. Mathematically, we can describe symmetry using groups. \newline
+
+For example, consider the symmetry group $S_3$ of order 6, which consists of rotations and reflections (on an equilateral triangle). \newline
+
+Sometimes we have an infinite amount of symmetry, consider the group which acts on a circle, this is an example of a \vocab{continuous group of symmetry}. (For example, we can take all real numbers in $\RR$ mod $2\pi$). \newline
+
+
+We can also take the linear symmetries on a vector space, and this forms the General Linear group, $GL$, consisting of all invertible matrices. $GL(n)$ consists of $n\times n$ matrices. \newline
+
+When we express the group actions in terms of coordinates, they are smooth and become differentiable. This is an example of a \vocab{Lie group}. \newline
+
+\vocab{Lie algebras} are the tangent spaces to Lie groups. The Lie algebra under $GL(n)$ is denoted by $\mathfrak{gl}(n)$. \newline
+
+The main difference between the algebras and groups in this case is that the Lie algebra is also a vector space. A Lie group is always nonlinear. 
+
+\subsection{Lie algebras and subalgebras}
+Consider $\mathfrak{gl}(n)$, the vector space of all $n \times n$ matrices under a field $\FF$. We can multiply and add matrices, and this gives the structure of a vector space. As we can multiply matrices, we have an algebra, and it is associative. In general, an algebra over a field $\FF$ is associative with a bilinear product. \newline
+
+Consider the \vocab{commutator}, which is defined as $[A,B] = AB - BA$. The commutator is skew symmetric, as $[A,B] = -[B,A]$.  Note that the commutator is also bilinear. The bracket is also skew symmetric: $[A,B] = -[B,A]$. Note that $[A,A] = 0$, as this is not obvious if the characteristic of $\FF$ is 2. The final property of the commutator is known as the \vocab{Jacobian identity}: 
+\[ [A,[B,C]] = [[A,B], C] + [B, [A,C]]. \] 
+We can now state the formal definition of a Lie algebra:
+\begin{definition}
+A \vocab{Lie algebra} is a vector space with a operation $[\cdot,\cdot]$ such that it satisfies bilinearity, skew-symmetry, and the Jacobian identity. 
+\end{definition}
+
+Note that we also have the following (equivalent) form of the Jacobian identity: 
+\[ \sum_{\text{cyc}} [A,[B,C]] = 0. \] 
+
+Every associative algebra is a Lie algebra under the commutator. If the product is defined as $AB$ for a general associative algebra, a Lie algebra can be generated under the commutator (preserving the original multiplication), $AB - BA$. 
+Consider the following examples:
+\begin{example}
+Consider the vector space $\frak{sl}(n) \subset gl(n)$ of all $n \times n$ matrices with trace 0. Note that $\dim{\frak{sl}(n)} = n^2 - 1$ (codimension 1 in $\frak{gl}(n)$). By preserving the commutator from $\frak{gl}(n)$, $\frak{sl}(n)$ is also a Lie algebra. 
+\end{example}
+
+The above is an example of a subalgebra:
+\begin{definition}
+A \vocab{subalgebra} is a subspace of a Lie algebra closed under the bracket. 
+\end{definition}
+ $sl(n)$ is a very important Lie algebra, and it will reappear many times. 
+
+ \begin{example}
+ Consider the vector space $\RR^3$. Note that the cross product is skew symmetric  \[ a\times b = -(b \times a) \] , so this is a candidate for a Lie algebra. Define the bracket $[a,b] = a\times b$. 
+ \end{example}
+
+ Note that the bracket is \emph{not} fixed for all Lie algebras. (oops)
+
+ \begin{remark*}
+ To give $[\cdot, \cdot]$ on a vector space $L$, it suffices to specify $[x_i, x_j]$ for a given basis $\CB = \{x_1, x_2, \cdots \}$. Then $[\cdot, \cdot]$ is extended $\forall x, y$ using the property of bilinearity. 
+ We can explicitly define the Lie bracket as 
+ \[ [x_i, x_j] = \sum_k c^k_{ij} x_k, \] where $c_{ij}$ are known as the \vocab{structure constants}. It suffices to verify that the axioms of a Lie algebra hold on just the basis vectors. 
+ \end{remark*}
+
+\begin{example}
+Consider the vector space $L = \Span{x,y,z}$. Define $[x,y] = z$, $[z,x] = [z,y] = 0$. It suffices to verify the jacobian identity on the basis vectors of $L$: 
+\[ \sum_{\text{cyc}} [x,[y,z]] = 0 + 0 + 0 = 0. \]  Such a $z$ as above is known as a \vocab{central element} ($[z,a] = 0$ for all $a \in L$). 
+\end{example}
+
+The above Lie algebra is known as the \vocab{Heisenberg Lie algebra}. ($[x,y] = z$ where $z$ is central)
+
+\begin{example}
+Classify all 1 dimensional Lie algebras. 
+\end{example}
+Note that all elements of a 1 dimensional vector space are scalar multiples of each other,  so 
+\[ [\alpha x, \beta x] = \alpha\beta [x,x] = 0. \] Thus all 1 dimensional Lie algebra have $[\cdot, \cdot] = 0$. Note that this alebra is \vocab{abelian}. 
+
+\begin{example}
+Classify all 2 dimensional Lie algebras. 
+\end{example}
+We can represent all such vector spaces as $L = \Span{x,y}$. Then 
+\[ [x,y] = \alpha x + \beta y = z. \] Then 
+\[ [x,z] = \alpha[x,x] + \beta[x,y] = \beta[x,y] = \beta z. \] If $\beta = 0$, $[x,y] = \alpha x$. If $\alpha = 0$, then $[x,y] = 0 \implies$ the algebra is abelian. If $\alpha \neq 0$, $[-\frac{1}{\alpha}y, x] = x$. If $\beta \neq 0$, then $[\frac{1}{\beta}x, z] = z$. 
+Thus we have the following classifications: 
+All 2 dimensional Lie algebras are either abelian, or has a basis $\{a,b\}$ such that $[a,b] = b$. 
+
+\begin{remark*}
+The identity matrix $I \in \frak{gl}(n)$ is central, as $IA = AI = A \implies [A,I] = 0$ for all $A$. In fact, any central element of $\frak{gl}(n)$ is a scalar multiple of $I$. 
+\end{remark*}
+
+\begin{example}
+Consider $\frak{gl}(2)$, which has a basis 
+\[ \left \{ E_{11} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, E_{12} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix},E_{21} = \begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix}, E_{22} = \begin{bmatrix} 0 & 0 \\ 0 & 1\end{bmatrix} \right \}. \]
+
+Note that $E_{11}E_{12} = E_{12}$, and that $E_{12}E_{11} = 0$. This implies that $[E_{11},E_{12}] = E_{12}$. Thus we have $L = \Span{E_{11}, E_{12}}$ as closed under the bracket, and is a subalgebra of $\frak{gl}(2)$. 
+\end{example}
+The above example is not restricted to the choice of elementary matrices, any choice of basis vectors gives a subalgebra under the space. 
+\begin{example}
+THe set of strictly upper triangular matrices $A$ such that $a_{ij} = 0$ if $\forall i \geq j$ is a subalgebra of $\frak{gl}(n)$, and is denoted by $\frak{n}(n)$. 
+\end{example}
